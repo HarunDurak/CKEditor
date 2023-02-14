@@ -1,0 +1,12 @@
+<div>
+  <ul style="display: flex;justify-content: center">
+    <li class="drag-drop" id="studentFirstName" draggable="true" (dragstart)="drag($event)">First name</li>
+    <li class="drag-drop" id="studentLastName" draggable="true" (dragstart)="drag($event)">Last name</li>
+    <li class="drag-drop" id="courseName" draggable="true" (dragstart)="drag($event)">Course Name</li>
+    <li class="drag-drop" id="courseHours" draggable="true" (dragstart)="drag($event)">Course Hours</li>
+  </ul>
+
+  <ckeditor [editor]="Editor" [config]='config' [(ngModel)]="value" (ready)="onReady($event)"
+            (drop)="drop($event)"></ckeditor>
+
+</div>
